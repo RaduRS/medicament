@@ -1,4 +1,3 @@
-
 const asyncHandler = require("express-async-handler");
 const sendEmail = require("../utils/sendEmail");
 
@@ -24,9 +23,6 @@ const updateReminder = async (req, res) => {
     res.status(500).json({ msg: error.message });
   }
 };
-
-
-
 
 const sendScheduledMessage = async (messageIndex) => {
   const send_to = process.env.EMAIL_SEND;
@@ -66,11 +62,11 @@ const sendScheduledMessages = asyncHandler(async () => {
 
   // Send message every day at 12:59, 13:12, and 13:15
   if (
-    (currentHour === 14 && currentMinute === 57) ||
-    (currentHour === 15 && currentMinute === 04) ||
-    (currentHour === 15 && currentMinute === 10)
+    (currentHour === 07 && currentMinute === 10) ||
+    (currentHour === 12 && currentMinute === 55) ||
+    (currentHour === 19 && currentMinute === 12)
   ) {
-    messageIndex = [57, 04, 10].indexOf(currentMinute);
+    messageIndex = [10, 55, 12].indexOf(currentMinute);
   }
 
   if (messageIndex !== -1) {
