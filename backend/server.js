@@ -23,12 +23,12 @@ mongoose
   .then(() => {
     app.listen(PORT, () => {
       console.log(`is running on port ${PORT}`);
-      setInterval(() => {
-        console.log("Pinging the app to keep it awake...");
-        fetch("https://<your-project-name>.glitch.me")
-          .then((response) => console.log("App is awake"))
-          .catch((error) => console.log("Error while pinging the app"));
-      }, 4 * 60 * 1000); // ping every 4 minutes
+      //   setInterval(() => {
+      //     console.log("Pinging the app to keep it awake...");
+      //     fetch("https://<your-project-name>.glitch.me")
+      //       .then((response) => console.log("App is awake"))
+      //       .catch((error) => console.log("Error while pinging the app"));
+      //   }, 4 * 60 * 1000); // ping every 4 minutes
     });
   })
   .catch((err) => console.log(err));
