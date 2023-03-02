@@ -62,11 +62,11 @@ const sendScheduledMessages = asyncHandler(async () => {
 
   // Send message every day at 12:59, 13:12, and 13:15
   if (
-    (currentHour === 07 && currentMinute === 10) ||
-    (currentHour === 13 && currentMinute === 11) ||
-    (currentHour === 19 && currentMinute === 45)
+    (currentHour === 05 && currentMinute === 10) ||
+    (currentHour === 10 && currentMinute === 55) ||
+    (currentHour === 17 && currentMinute === 12)
   ) {
-    messageIndex = [10, 11, 45].indexOf(currentMinute);
+    messageIndex = [10, 55, 12].indexOf(currentMinute);
   }
 
   if (messageIndex !== -1) {
