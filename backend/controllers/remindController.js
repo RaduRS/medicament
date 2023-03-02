@@ -66,7 +66,7 @@ const sendScheduledMessages = asyncHandler(async () => {
     (currentHour === 12 && currentMinute === 55) ||
     (currentHour === 19 && currentMinute === 01)
   ) {
-    messageIndex = [10, 50, 01].indexOf(currentMinute);
+    messageIndex = [10, 55, 01].indexOf(currentMinute);
   }
 
   if (messageIndex !== -1) {
