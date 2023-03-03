@@ -18,10 +18,10 @@ app.use("/api", pillRoutes);
 
 app.listen(PORT, () => {
   console.log(`is running on port ${PORT}`);
-  setInterval(() => {
-    console.log("Pinging the app to keep it awake...");
-    fetch("https://medicament.onrender.com")
-      .then((response) => console.log("App is awake"))
-      .catch((error) => console.log("Error while pinging the app"));
-  }, 10 * 60 * 1000); // ping every 10 minutes
+  // setInterval(() => {
+  //   console.log("Pinging the app to keep it awake...");
+  //   fetch("https://medicament.onrender.com")
+  //     .then((response) => console.log("App is awake"))
+  //     .catch((error) => console.log("Error while pinging the app"));
+  // }, 10 * 60 * 1000); // ping every 10 minutes
 });
